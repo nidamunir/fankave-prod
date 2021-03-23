@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CISCO LiVE 💡 </title>
+ 
+  <script src="https://ciscolive.fankave.com/jsembed/federation.js"></script>
+  <script src="https://ciscolive.fankave.com/jsembed/pollQnaTab.js"></script>
+  <script src="https://ciscolive.fankave.com/jsembed/leaderboard.js"></script>
+  <script src="https://ciscolive.fankave.com/jsembed/trivia.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="https://ciscolive.fankave.com/jsembed/common.css" />
+  <link rel="stylesheet" type="text/css" href="https://ciscolive.fankave.com/jsembed/pollQna.css" />
+  <link rel="stylesheet" type="text/css" href="https://ciscolive.fankave.com/jsembed/trivia.css" />
+  <link rel="stylesheet" type="text/css" href="https://ciscolive.fankave.com/jsembed/leaderboard.css" />
+
+
+<script type="text/javascript">
+ 
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('id');
+    self.window.userConfig = {
+      stadiumId: myParam,
+      origin: 'https://ciscolive.fankave.com',
+    }
+ 
+    self.window.pollConfig = {
+            POLL_UPCOMING_MESSAGE: 'The next poll starts in:',
+            POLL_WAITING_MESSAGE: 'Please stay tuned for the next live event.',
+            POLL_PARTICIPATION_SUCCESSFUL_MESSAGE: 'Thanks for participating in the poll!',
+            POLL_JOIN_TEXT: 'Join Now',
+            POLL_SUBMIT_TEXT: 'Submit',
+            POLL_DONE_TEXT: 'Done',
+            POLL_HEADER_TEXT: 'Back',
+            POLL_VIEW_ARCHIVED_TEXT: "View Archived Polls"
+        }
+
+        self.window.triviaConfig = {
+            TRIVIA_UPCOMING_MESSAGE: 'The next trivia starts in:',
+            TRIVIA_WAITING_MESSAGE: 'Trivia is coming soon!',
+            TRIVIA_PARTICIPATION_SUCCESSFUL_MESSAGE: 'Thanks for participating in the trivia!',
+            TRIVIA_HEADER_TEXT: 'Back',
+            TRIVIA_JOIN_TEXT: 'Join Now',
+            TRIVIA_RESUME_TEXT: 'Resume Trivia',
+            TRIVIA_DONE_TEXT: 'Done',
+            TRIVIA_NEXT_TEXT: 'Next',
+            TRIVIA_VIEW_ARCHIVED_TEXT: 'View Archived Trivia',
+            TRIVIA_VIEW_RESULTS_TEXT: 'Review Your Answers',
+            TRIVIA_WELCOME_MESSAGES: [
+                'Have you been paying attention?',
+                'Test your knowledge, see how well you stack up on the leaderboard.'
+            ],
+        }
+
+        self.window.qnaConfig = {
+            QNA_UPCOMING_MESSAGE: "Live Q&A will begin in",
+            QNA_WAITING_MESSAGE: "No Q&A is live.",
+            QNA_HEADER_TEXT: "All Questions",
+            QNA_VIEW_ARCHIVED_TEXT: "View Archived Q&A",
+            QNA_JOIN_TEXT: "Join Now",
+            QNA_SEND_TEXT: "SEND"
+        }
+
+
+  </script> 
+      
+  <style>
+      /* #pollQnaTab .ant-tabs-nav-list {
+        display:none !important;
+      }    */
+  </style>
+
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div id="pollQnaTab" class="wrapper"></div>
+         <div id="trivia" class="wrapper"></div>
+    </div>
+       <div id="leaderboard" class="l-wrapper"></div>
+</body>
+
+</html>
